@@ -1,0 +1,140 @@
+.resize__container {
+  width: 290px;
+  background-color: rgba(0, 0, 0, .02);
+  font-size: 18px;
+  padding: 16px 16px;
+  position: relative;
+}
+.resize__underline {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 12px 0;
+}
+
+
+.resize__type-container {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.resize__input-container {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resize__type-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+}
+
+.resize__type-item--active {
+  background: #5eb035;
+  color: #fff;
+  border-color: #5eb035;
+}
+
+.resize__type-item input {
+  cursor: pointer;
+}
+
+
+.resize__message-item ~ .resize__message-item {
+  margin-top: 8px;
+}
+
+.resize__message-item-title {
+  display: inline-block;
+  font-weight: 550;
+  width: 80px;
+}
+
+.resize__message-warning {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.resize__message-warning img {
+  width: 18px;
+  height: 18px;
+  vertical-align: text-top;
+}
+
+.resize__input {
+  width: 80px;
+  padding: 4px;
+  font-size: 18px;
+}
+
+
+.resize__input-button {
+  background: #5eb035;
+  color: #fff;
+  border: 0px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.resize__input-button:hover {
+  background: #68c43b;
+}
+
+.resize__item-container {
+  margin: 0 -16px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.resize__item {
+  padding-left: 16px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.resize__item:hover {
+  background-color: #7DE442;
+}
+
+.resize__item-delete {
+  width: 24px;
+  margin-left: auto;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+
+
+.resize__idx {
+  font-size: 16px;
+  border-radius: 50%;
+  width: 20px;
+  margin: 0 8px;
+}
+
+
+.resize__value {
+  font-weight: 500;
+}
+
+.resize__line {
+  margin-right: 16px;
+  width: 1.5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 45%;
+}
+
+.resize__item ~ .resize__item {
+  margin-top: 4px;
+}

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "View Resize",
+  "description": "浏览器窗口大小缩放",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "./assets/screen.png",
+    "default_popup": "index.html"
+  }
+}
