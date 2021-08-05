@@ -1,5 +1,5 @@
 .resize__container {
-  width: 290px;
+  width: 320px;
   background-color: rgba(0, 0, 0, .02);
   font-size: 18px;
   padding: 16px 16px;
@@ -10,6 +10,12 @@
   height: 1px;
   background-color: rgba(0, 0, 0, 0.2);
   margin: 12px 0;
+}
+
+.resize__github-link {
+  color: #409EFF;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 
@@ -45,6 +51,11 @@
   cursor: pointer;
 }
 
+.resize__message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .resize__message-item ~ .resize__message-item {
   margin-top: 8px;

@@ -5,14 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>View Resizer</title>
   <link rel="stylesheet" href="./index.css">
 </head>
 
 <body style="margin: 0;">
   <div class="resize__container">
     <div class="resize__message-container">
-      <div class="resize__message-item"><b>CurrentSize</b></div>
+      <div class="resize__message-item resize__message-header">
+        <b>CurrentSize</b>
+        <div id="github" class="resize__github-link">Github</div>
+      </div>
       <div class="resize__message-item" id="messageViewport">
         <span class="resize__message-item-title">viewport: </span> <b id="currentViewport"></b>
       </div>

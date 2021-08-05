@@ -3,6 +3,9 @@ let selectTypeValue = '';
 let ratios = [];
 
 window.onload = function () {
+  document.querySelector('#github').onclick = function () {
+    window.open('https://github.com/kongkong99/View-Resizer', "_blank");
+  };
   bindTypeEvent();
   updateWindowSize();
 
@@ -15,7 +18,6 @@ window.onload = function () {
   // 读取数据，第一个参数是指定要读取的key以及设置默认值
   chrome.storage.sync.get({ ratios: [], type: 'viewport' }, function (args) {
     selectType(args.type);
-    console.log(33, args);
     ({ ratios } = args);
     if (ratios.length === 0) {
       ratios = Default_RATIOS;
@@ -91,7 +93,6 @@ window.onload = function () {
       const inputHeightNode = document.querySelector('#inputHeight');
       const width = Number(inputWidthNode.value);
       const height = Number(inputHeightNode.value);
-      console.log(44, ratios, width, height);
       if (width && height) {
         if (ratios.every(([itemWidth, itemHeight]) => !(itemWidth === width && itemHeight === height))) {
           ratios.push([width, height]);
@@ -99,11 +100,6 @@ window.onload = function () {
           createRatioNode();
         }
         updateWindowSize(width, height);
-
-        // todo: 优化添加函数
-        // 添加删除功能
-        // 添加二维码
-        // 字体稍微放大些
       }
 
     };
