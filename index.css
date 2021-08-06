@@ -13,10 +13,21 @@
 }
 
 .resize__github-link {
-  color: #409EFF;
   cursor: pointer;
   font-size: 16px;
+  width: 20px;
+  position: relative;
 }
+
+.resize__github-link::before {
+  content: '';
+  position: absolute;
+  top: -10px; 
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+ } 
+
 
 
 .resize__type-container {
@@ -59,28 +70,31 @@
 
 .resize__message-item ~ .resize__message-item {
   margin-top: 8px;
+  font-weight: 450;
 }
 
 .resize__message-item-title {
   display: inline-block;
-  font-weight: 550;
   width: 80px;
 }
 
 .resize__message-warning {
   color: rgba(0, 0, 0, 0.5);
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
 }
 
 .resize__message-warning img {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   vertical-align: text-top;
+  margin-left: 8px;
 }
 
 .resize__input {
-  width: 80px;
+  width: 28%;
   padding: 4px;
   font-size: 18px;
 }

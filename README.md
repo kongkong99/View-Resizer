@@ -1,6 +1,6 @@
-# View-Resizer (视窗大小调整chrome插件)  
-Window and Viewport Resizer - chrome extension  
-可以调整改变浏览器窗口或可视窗口的大小
+## View-Resizer (chrome extension)  
+Window and Viewport Precise Resizer  
+精确调整窗口或可视窗口大小
 
 ### screenshots
 <img src="assets/viewResizershot.png" width = "300"  alt="" />  

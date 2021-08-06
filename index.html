@@ -13,42 +13,48 @@
   <div class="resize__container">
     <div class="resize__message-container">
       <div class="resize__message-item resize__message-header">
-        <b>CurrentSize</b>
-        <div id="github" class="resize__github-link">Github</div>
+        <span style="font-weight: 520;">Current Size</span>
+        <div id="github" class="resize__github-link">
+          <img src="./assets/githublogo.png" style="width: 100%;">
+        </div>
+
       </div>
       <div class="resize__message-item" id="messageViewport">
-        <span class="resize__message-item-title">viewport: </span> <b id="currentViewport"></b>
+        <span class="resize__message-item-title">viewport: </span> <span id="currentViewport"></span>
       </div>
       <div class="resize__message-item" id="windowViewport">
-        <span class="resize__message-item-title">&nbsp;&nbsp;window: </span> <b id="currentWindow"></b>
+        <span class="resize__message-item-title">&nbsp;&nbsp;window: </span> <span id="currentWindow"></span>
       </div>
-      <div class="resize__message-warning"><img src="./warning.svg" alt=" "> Final height <= Screen availHeight </div>
-      </div>
-      <div class="resize__underline"></div>
-
-      <div class="resize__type-container">
-        <div class="resize__type-item" id="typeViewport" style="margin-right: 16px;">
-          viewport
-        </div>
-
-        <div class="resize__type-item" id="typeWindow">
-          window
-        </div>
-      </div>
-      <div class="resize__item-container" id="ratioContainer">
-
-      </div>
-
-      <div class="resize__input-container">
-        <input id="inputWidth" type="number" placeholder="width" class="resize__input">
-        ×
-        <input id="inputHeight" type="number" placeholder="height" class="resize__input">
-        <button type="button" class="resize__input-button" id="confirmButton">confirm</button>
+      <div class="resize__message-warning">
+        <img src="./assets/warning.svg" alt=" ">
+        <span>Final height <= Screen availHeight</span>
       </div>
     </div>
+    <div class="resize__underline"></div>
+
+    <div class="resize__type-container">
+      <div class="resize__type-item" id="typeViewport" style="margin-right: 16px;">
+        viewport
+      </div>
+
+      <div class="resize__type-item" id="typeWindow">
+        window
+      </div>
+    </div>
+    <div class="resize__item-container" id="ratioContainer">
+
+    </div>
+
+    <div class="resize__input-container">
+      <input id="inputWidth" type="number" placeholder="width" class="resize__input">
+      ×
+      <input id="inputHeight" type="number" placeholder="height" class="resize__input">
+      <button type="button" class="resize__input-button" id="confirmButton">confirm</button>
+    </div>
+  </div>
 
 
-    <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
 
 </body>
 

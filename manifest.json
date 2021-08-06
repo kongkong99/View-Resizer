@@ -1,12 +1,12 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "View Resizer",
-  "description": "浏览器窗口大小缩放",
+  "description": "Window and Viewport Precise Resizer（精确调整窗口或可视窗口大小）",
   "version": "1.0.0",
   "permissions": [
     "storage"
   ],
-  "browser_action": {
+  "action": {
     "default_icon": "./assets/screen.png",
     "default_popup": "index.html"
   }

@@ -10,9 +10,11 @@ window.onload = function () {
   updateWindowSize();
 
   let Default_RATIOS = [
-    [1024, 768],
+    [1280, 800],
+    [1366, 768],
     [1440, 900],
     [1680, 1050],
+    [1920, 1080],
     [2560, 1440],
   ];
   // 读取数据，第一个参数是指定要读取的key以及设置默认值
@@ -51,7 +53,7 @@ window.onload = function () {
 
         const ratioDeleteNode = document.createElement('img');
         ratioDeleteNode.setAttribute('class', 'resize__item-delete');
-        ratioDeleteNode.setAttribute('src', './assets/delete.svg');
+        // ratioDeleteNode.setAttribute('src', './assets/delete.svg');
         ratioDeleteNode.setAttribute('type', 'image/svg+xml');
 
         ratioDeleteNode.onmouseenter = function () {
@@ -60,6 +62,18 @@ window.onload = function () {
         };
         ratioDeleteNode.onmouseleave = function () {
           ratioDeleteNode.setAttribute('src', './assets/delete.svg');
+        };
+
+        ratioEle.onmouseenter = function () {
+          ratioDeleteNode.setAttribute('style', 'display: inline-block;');
+          ratioDeleteNode.setAttribute('src', './assets/delete.svg');
+          ratioEle.setAttribute('style', 'color: #fff;');
+          ratioLineEle.setAttribute('style', 'background:#fff');
+        };
+        ratioEle.onmouseleave = function () {
+          ratioDeleteNode.setAttribute('style', 'display: none;');
+          ratioEle.setAttribute('style', '');
+          ratioLineEle.setAttribute('style', '');
         };
 
         ratioDeleteNode.onclick = function (e) {
@@ -85,12 +99,29 @@ window.onload = function () {
     createRatioNode();
 
 
+
+    const inputWidthNode = document.querySelector('#inputWidth');
+    const inputHeightNode = document.querySelector('#inputHeight');
+
+    inputWidthNode.onblur = function () {
+      const width = Number(inputWidthNode.value);
+      if (width && width < 500) {
+        inputWidthNode.value = 500;
+      }
+    };
+
+    inputHeightNode.onblur = function () {
+      const width = Number(inputHeightNode.value);
+      if (width && width < 250) {
+        inputHeightNode.value = 250;
+      }
+    };
+
     // 主动输入改变窗口事件
     const confirmButtonEle = document.querySelector('#confirmButton');
 
     confirmButtonEle.onclick = function () {
-      const inputWidthNode = document.querySelector('#inputWidth');
-      const inputHeightNode = document.querySelector('#inputHeight');
+
       const width = Number(inputWidthNode.value);
       const height = Number(inputHeightNode.value);
       if (width && height) {
