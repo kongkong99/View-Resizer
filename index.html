@@ -12,34 +12,32 @@
 <body style="margin: 0;">
   <div class="resize__container">
     <div class="resize__message-container">
-      <div class="resize__message-item resize__message-header">
-        <span style="font-weight: 520;">Current Size</span>
+
+      <div class="resize__message-item  resize__message-header" id="windowViewport">
+        <div>
+          <span class="resize__message-item-title">window: </span>
+          <span id="currentWindow"></span>
+        </div>
         <div id="github" class="resize__github-link">
           <img src="./assets/githublogo.png" style="width: 100%;">
         </div>
-
       </div>
+
       <div class="resize__message-item" id="messageViewport">
         <span class="resize__message-item-title">viewport: </span> <span id="currentViewport"></span>
       </div>
-      <div class="resize__message-item" id="windowViewport">
-        <span class="resize__message-item-title">&nbsp;&nbsp;window: </span> <span id="currentWindow"></span>
-      </div>
+
       <div class="resize__message-warning">
-        <img src="./assets/warning.svg" alt=" ">
-        <span>Final height <= Screen availHeight</span>
+        <span>Final height <= Screen availHeight </span>
       </div>
     </div>
     <div class="resize__underline"></div>
 
     <div class="resize__type-container">
-      <div class="resize__type-item" id="typeViewport" style="margin-right: 16px;">
-        viewport
-      </div>
+      <button type="button" class="resize__type-button" id="typeWindow" style="margin-right: 16px;">window</button>
 
-      <div class="resize__type-item" id="typeWindow">
-        window
-      </div>
+      <button type="button" class="resize__type-button" id="typeViewport">viewport</button>
+
     </div>
     <div class="resize__item-container" id="ratioContainer">
 

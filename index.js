@@ -103,25 +103,7 @@ window.onload = function () {
     const inputWidthNode = document.querySelector('#inputWidth');
     const inputHeightNode = document.querySelector('#inputHeight');
 
-    inputWidthNode.onblur = function () {
-      const width = Number(inputWidthNode.value);
-      if (width && width < 500) {
-        inputWidthNode.value = 500;
-      }
-    };
-
-    inputHeightNode.onblur = function () {
-      const width = Number(inputHeightNode.value);
-      if (width && width < 250) {
-        inputHeightNode.value = 250;
-      }
-    };
-
-    // 主动输入改变窗口事件
-    const confirmButtonEle = document.querySelector('#confirmButton');
-
-    confirmButtonEle.onclick = function () {
-
+    function resizeView() {
       const width = Number(inputWidthNode.value);
       const height = Number(inputHeightNode.value);
       if (width && height) {
@@ -132,7 +114,47 @@ window.onload = function () {
         }
         updateWindowSize(width, height);
       }
+    }
 
+    function amendValue() {
+      let width = Number(inputWidthNode.value);
+      if (width && width < 500) {
+        inputWidthNode.value = 500;
+      }
+
+      width = Number(inputHeightNode.value);
+      if (width && width < 250) {
+        inputHeightNode.value = 250;
+      }
+    }
+
+    inputWidthNode.onblur = function () {
+      amendValue();
+    };
+
+    inputHeightNode.onblur = function () {
+      amendValue();
+    };
+    inputWidthNode.onkeypress = function (e) {
+      if (e.keyCode === 13) {
+        amendValue();
+        resizeView();
+      }
+    };
+    inputHeightNode.onkeypress = function (e) {
+      if (e.keyCode === 13) {
+        amendValue();
+        resizeView();
+      }
+    };
+
+
+
+    // 主动输入改变窗口事件
+    const confirmButtonEle = document.querySelector('#confirmButton');
+
+    confirmButtonEle.onclick = function () {
+      resizeView();
     };
 
   });
@@ -156,8 +178,8 @@ function selectType(type) {
   selectTypeValue = type;
   const typeViewportEle = document.querySelector('#typeViewport');
   const typeWindowEle = document.querySelector('#typeWindow');
-  typeViewportEle.setAttribute('class', 'resize__type-item');
-  typeWindowEle.setAttribute('class', 'resize__type-item');
+  typeViewportEle.setAttribute('class', 'resize__type-button');
+  typeWindowEle.setAttribute('class', 'resize__type-button');
 
   const messageViewport = document.querySelector('#messageViewport');
   const windowViewport = document.querySelector('#windowViewport');
@@ -165,11 +187,11 @@ function selectType(type) {
   windowViewport.setAttribute('style', '');
 
   if (type === 'viewport') {
-    typeViewportEle.setAttribute('class', 'resize__type-item resize__type-item--active');
+    typeViewportEle.setAttribute('class', 'resize__type-button resize__type-button--active');
     messageViewport.setAttribute('style', 'color: #5eb035');
   }
   if (type === 'window') {
-    typeWindowEle.setAttribute('class', 'resize__type-item resize__type-item--active');
+    typeWindowEle.setAttribute('class', 'resize__type-button resize__type-button--active');
     windowViewport.setAttribute('style', 'color: #5eb035');
   }
   chrome.storage.sync.set({ type });
