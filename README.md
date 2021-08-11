@@ -3,8 +3,8 @@ Window and Viewport Precise Resizer
 精确调整窗口或可视窗口大小
 
 ### install View-Resizer
-- chromeWebStore [link](https://chrome.google.com/webstore/detail/view-resizer/dgnbmiehopjhpjbkpgcgjfmomfpmhlno/related?hl=zh-CN)
- chrome应用商店 [链接](https://chrome.google.com/webstore/detail/view-resizer/dgnbmiehopjhpjbkpgcgjfmomfpmhlno/related?hl=zh-CN)
+- [chromeWebStore](https://chrome.google.com/webstore/detail/view-resizer/dgnbmiehopjhpjbkpgcgjfmomfpmhlno/related?hl=zh-CN)    
+- [chrome应用商店](https://chrome.google.com/webstore/detail/view-resizer/dgnbmiehopjhpjbkpgcgjfmomfpmhlno/related?hl=zh-CN)    
 - installation package（安装包）./View Resizer.crx
 
 
